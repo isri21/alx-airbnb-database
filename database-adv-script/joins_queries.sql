@@ -6,7 +6,8 @@ ON u.id = b.user_id;
 -- Write a query using aLEFT JOIN to retrieve all properties and their reviews, including properties that have no reviews
 SELECT * FROM properties p
 LEFT JOIN reviews r
-ON p.id = r.property_id;
+ON p.id = r.property_id
+ORDER BY p.id;
 
 -- Write a query using a FULL OUTER JOIN to retrieve all users and all bookings, even if the user has no booking or a booking is not linked to a user
 SELECT * FROM users u
